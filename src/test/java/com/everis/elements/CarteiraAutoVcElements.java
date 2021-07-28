@@ -53,7 +53,7 @@ public class CarteiraAutoVcElements {
 	@iOSXCUITFindBy(xpath = "??????")
 	public WebElement brindeEmProgresso;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='xxxx']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Desconto para Iniciantes 3 % Pendente']")
 	@iOSXCUITFindBy(xpath = "??????")
 	public WebElement semBrindeIniciante;
 	

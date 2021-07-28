@@ -158,7 +158,6 @@ public class Usuario extends DslMobile {
 //			tap(userElements.otmBateria);
 //			tap(userElements.permitirAndroidbat);
 			
-			
 			if (isPresent(userElements.errorMsg)) {
 				message = "Email e/ou senha incorreta(s)";
 			}
