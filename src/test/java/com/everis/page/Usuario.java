@@ -155,9 +155,8 @@ public class Usuario extends DslMobile {
 			screenShot();
 			waitLoading();
 			Thread.sleep(1500);
-			tap(userElements.otmBateria);
-			tap(userElements.permitirAndroidbat);
-			
+//			tap(userElements.otmBateria);
+//			tap(userElements.permitirAndroidbat);
 			
 			
 			if (isPresent(userElements.errorMsg)) {

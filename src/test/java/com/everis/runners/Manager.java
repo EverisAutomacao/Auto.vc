@@ -108,6 +108,20 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
+			
+			// Login Email Sem Viagens==================================================
+			case "Login Email Sem Viagens":
+				message = termos.concordar();
+				if (!message.isEmpty())
+					return message;
+				message = common.pularTourInicial();
+				if (!message.isEmpty())
+					return message;
+				message = usuario.loginEmail();
+				if (!message.isEmpty())
+					return message;
+				message = usuario.verificarSeEstaNaTelaInicial();
+				break;
 
 		// Login Gmail ==================================================
 		case "Login Gmail":
@@ -267,6 +281,18 @@ public class Manager extends Dados {
 				return message;
 			message = carteiraAutoVc.semCupom();
 			break;
+			
+			// Sem brindes Desconto Iniciante ================================================
+			case "Sem Brinde Desconto Iniciante":
+				message = common.verificaLogin();
+				if (!message.isEmpty())
+					return message;
+					message = carteiraAutoVc.minhaCarteiraAutoVc();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.semBrindeIniciante();
+				break;
+			
 		// Agenda do Carro ================================================
 		case "Agenda do Carro":
 			message = termos.concordar();

@@ -247,5 +247,26 @@ public class CarteiraAutoVc extends DslMobile {
 		}
 		return message;
 	}
+	
+	public String semBrindeIniciante() {
+		message = "";
+
+		try {
+			Thread.sleep(1000);
+			scroll(90, 20, 1);
+			Thread.sleep(1000);
+			if (isPresent(elements.brindeEmProgresso)) {
+				message = "Falha na validação de usuário novo, brinde em progresso";
+			}
+			
+		} catch (Exception e) {
+			message = "Falha ao validar brinde";
+			e.printStackTrace();
+		} finally {
+			screenShot();
+		}
+		return message;
+	}
+	
 
 }
