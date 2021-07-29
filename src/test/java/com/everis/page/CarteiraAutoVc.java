@@ -255,7 +255,7 @@ public class CarteiraAutoVc extends DslMobile {
 			Thread.sleep(1000);
 			scroll(90, 20, 1);
 			Thread.sleep(1000);
-			if (isPresent(elements.brindeEmProgresso)) {
+			if (isPresent(elements.semBrindeIniciante)) {
 				message = "Falha na validação de usuário novo, brinde em progresso";
 			}
 			

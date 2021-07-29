@@ -106,10 +106,14 @@ public class Ranking extends DslMobile {
 		String abaRankingXPath = "//android.widget.TextView[@text='Ranking']";
 		String conviteRecebido = "//android.widget.ScrollView[@content-desc='comp.screen.scrollView']/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]";
 		try {
+		
 
 			tap(By.xpath(abaRankingXPath));
 			screenShot();
 			Thread.sleep(3000);
+			
+			if (isPresent(rankingElements.getBtnAgoraNao())) 
+				tap(rankingElements.getBtnAgoraNao());
 
 			if (isPresent(By.xpath(conviteRecebido))) {
 				tap(By.xpath(conviteRecebido));
