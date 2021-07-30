@@ -108,20 +108,20 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
-			
-			// Login Email Sem Viagens==================================================
-			case "Login Email Sem Viagens":
-				message = termos.concordar();
-				if (!message.isEmpty())
-					return message;
-				message = common.pularTourInicial();
-				if (!message.isEmpty())
-					return message;
-				message = usuario.loginEmail();
-				if (!message.isEmpty())
-					return message;
-				message = usuario.verificarSeEstaNaTelaInicial();
-				break;
+
+		// Login Email Sem Viagens==================================================
+		case "Login Email Sem Viagens":
+			message = termos.concordar();
+			if (!message.isEmpty())
+				return message;
+			message = common.pularTourInicial();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.loginEmail();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			break;
 
 		// Login Gmail ==================================================
 		case "Login Gmail":
@@ -224,7 +224,7 @@ public class Manager extends Dados {
 				return message;
 			message = perfil.editarPerfil();
 			break;
-			// Verficar Perfil ===============================================
+		// Verficar Perfil ===============================================
 		case "Verificar Perfil":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
@@ -265,6 +265,18 @@ public class Manager extends Dados {
 			message = contrato.clicarEmailAutovc();
 			break;
 
+		// Usuário sem viagem - Cards ================================================
+		case "Usuario sem viagem - Cards":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.telaInicialcapturaCards();
+			if (!message.isEmpty())
+				return message;
+			break;
+			
+			//validarBrindeCheckUpAutomotivo() 
 		// Sem brindes ================================================
 		case "Sem Brinde":
 			message = termos.concordar();
@@ -276,23 +288,24 @@ public class Manager extends Dados {
 			message = usuario.loginEmail();
 			if (!message.isEmpty())
 				return message;
-				message = carteiraAutoVc.minhaCarteiraAutoVc();
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
 			if (!message.isEmpty())
 				return message;
 			message = carteiraAutoVc.semCupom();
 			break;
-			
-			// Sem brindes Desconto Iniciante ================================================
-			case "Sem Brinde Desconto Iniciante":
-				message = common.verificaLogin();
-				if (!message.isEmpty())
-					return message;
-					message = carteiraAutoVc.minhaCarteiraAutoVc();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.semBrindeIniciante();
-				break;
-			
+
+		// Sem brindes Desconto Iniciante
+		// ================================================
+		case "Sem Brinde Desconto Iniciante":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.semBrindeIniciante();
+			break;
+
 		// Agenda do Carro ================================================
 		case "Agenda do Carro":
 			message = termos.concordar();
@@ -486,7 +499,7 @@ public class Manager extends Dados {
 			message = manifestacao.abrirManifestacao();
 			break;
 		// Confirmar viagens como Motorista
-		//================================================
+		// ================================================
 		case "Confirmar viagens como Motorista":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
@@ -568,7 +581,7 @@ public class Manager extends Dados {
 		// Viagens como Passageiro ================================================
 		case "Calcular":
 			message = cotacao.lerDadosLinha();
-			if (!message.isEmpty())	
+			if (!message.isEmpty())
 				return message;
 			message = cotacao.login();
 			if (!message.isEmpty())

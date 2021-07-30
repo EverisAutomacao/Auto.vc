@@ -26,7 +26,7 @@ public class Usuario extends DslMobile {
 	public String verificarSeEstaNaTelaInicial() {
 		message = "";
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			wait.until(ExpectedConditions.visibilityOfAllElements(userElements.telaInicial));
 		} catch (Exception e) {
 			message = "Não esta na tela inicial";
