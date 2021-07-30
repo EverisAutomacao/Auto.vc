@@ -289,6 +289,19 @@ public class Manager extends Dados {
 				return message;
 			break;
 			
+			// Usuario sem viagem - Cupons ================================================
+			case "Usuario sem viagem - Cupons":
+				message = common.verificaLogin();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.minhaCarteiraAutoVc();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.capturaTelaCupons();
+				if (!message.isEmpty())
+					return message;
+				break;
+			
 			 
 		// Sem brindes ================================================
 		case "Sem Brinde":

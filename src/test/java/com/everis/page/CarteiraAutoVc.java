@@ -51,6 +51,23 @@ public class CarteiraAutoVc extends DslMobile {
 		return message;
 	}
 	
+	public String capturaTelaCupons() {
+		message = "";
+		try {
+			Thread.sleep(500);
+			waitLoading();
+			screenShot();
+			scroll(90, 35, 1);
+			scroll(90, 25, 1);
+			Thread.sleep(500);
+			screenShot();
+				
+		} catch (Exception e) {
+			message = "Falha ao capturar tela de Cupons";
+			e.printStackTrace();
+		} 
+		return message;
+	}
 	
 	
 	
