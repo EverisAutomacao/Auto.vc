@@ -271,12 +271,25 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
-			message = carteiraAutoVc.telaInicialcapturaCards();
+			message = carteiraAutoVc.telaInicialCapturaCards();
 			if (!message.isEmpty())
 				return message;
 			break;
 			
-			//validarBrindeCheckUpAutomotivo() 
+			// Usuario sem viagem - Brindes ================================================
+		case "Usuario sem viagem - Brindes":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaBrindes();
+			if (!message.isEmpty())
+				return message;
+			break;
+			
+			 
 		// Sem brindes ================================================
 		case "Sem Brinde":
 			message = termos.concordar();

@@ -18,15 +18,43 @@ public class CarteiraAutoVc extends DslMobile {
 		message = "";
 		try {
 			tap(elements.btnDescontos);
-			
 		} catch (Exception e) {
 			message = "Falha ao acessar tela minha carteira AutoVc";
 			e.printStackTrace();
 		} finally {
+
 			screenShot();
 		}
 		return message;
 	}
+	
+	public String capturaTelaBrindes() {
+		message = "";
+		try {
+			Thread.sleep(500);
+			screenShot();
+			waitLoading();
+			scroll(90, 35, 1);
+			Thread.sleep(500);
+			screenShot();
+			//scroll(90, 25, 1);
+//			Thread.sleep(500);
+//			screenShot();
+				
+		} catch (Exception e) {
+			message = "Falha ao capturar tela de Brindes";
+			e.printStackTrace();
+		} finally {
+
+			screenShot();
+		}
+		return message;
+	}
+	
+	
+	
+	
+	
 
 	public String gerarCupomLargada() {
 		message = "";
@@ -78,7 +106,7 @@ public class CarteiraAutoVc extends DslMobile {
 		return message;
 	}
 	
-	public String telaInicialcapturaCards() {
+	public String telaInicialCapturaCards() {
 		message = "";
 
 		try {
@@ -93,7 +121,7 @@ public class CarteiraAutoVc extends DslMobile {
 			scroll(90, 25, 1);
 			screenShot();
 		} catch (Exception e) {
-			message = "Falha ao validar brinde";
+			message = "Falha ao capturar cards";
 			e.printStackTrace();
 		} finally {
 			//screenShot();
