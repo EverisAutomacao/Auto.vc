@@ -37,9 +37,6 @@ public class CarteiraAutoVc extends DslMobile {
 			scroll(90, 35, 1);
 			Thread.sleep(500);
 			screenShot();
-			//scroll(90, 25, 1);
-//			Thread.sleep(500);
-//			screenShot();
 				
 		} catch (Exception e) {
 			message = "Falha ao capturar tela de Brindes";
@@ -68,7 +65,6 @@ public class CarteiraAutoVc extends DslMobile {
 		} 
 		return message;
 	}
-	
 	
 	
 	
@@ -103,16 +99,15 @@ public class CarteiraAutoVc extends DslMobile {
 		message = "";
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			waitLoading();
 			scroll(90, 20, 1);
 			screenShot();
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.btnBrindeAutomotivo));
 			tap(elements.btnBrindeAutomotivo);
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.codigoCupom));
-			screenShot();
 			tap(elements.btnAcessarSite);
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 
 		} catch (Exception e) {
 			message = "Falha ao validar brinde";
@@ -151,9 +146,9 @@ public class CarteiraAutoVc extends DslMobile {
 		message = "";
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			waitLoading();
-			scroll(90, 20, 1);
+			scroll(95, 20, 2);
 			screenShot();
 			tap(elements.btnBrindeCarro);
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.codigoCupom));
@@ -224,12 +219,18 @@ public class CarteiraAutoVc extends DslMobile {
 	public String compartilharCupom() {
 		message = "";
 
-		String btnCupom = "//*[@content-desc='openPresent']/android.widget.TextView[@text='Desconto Seguro']";
+		String btnCupom = "//*[@content-desc='openPresent']/android.widget.TextView[@text='Agenda do Carro']";
+		///hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup
+///hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup
+		//acessar site
 		try {
 
 			waitLoading();
 			Thread.sleep(1000);
 			waitLoading();
+			scroll(90, 20, 1);
+			screenShot();
+			Thread.sleep(1000);
 			scroll(90, 20, 1);
 			screenShot();
 			Thread.sleep(1000);

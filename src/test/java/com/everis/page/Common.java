@@ -297,6 +297,7 @@ public class Common extends DslMobile {
 		try {
 			Usuario user = new Usuario();
 			Termos termos = new Termos();
+			Thread.sleep(5000);
 			if (!user.verificarSeEstaLogado()) {
 				message = termos.concordar();
 				if(!message.isEmpty())

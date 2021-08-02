@@ -346,20 +346,26 @@ public class Manager extends Dados {
 
 		// Agenda do Carro ================================================
 		case "Agenda do Carro":
-			message = termos.concordar();
+			message = common.verificaLogin();
 			if (!message.isEmpty())
 				return message;
-			message = common.pularTourInicial();
-			if (!message.isEmpty())
-				return message;
-			message = usuario.loginEmail();
-			if (!message.isEmpty())
-				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
 			message = carteiraAutoVc.minhaCarteiraAutoVc();
 			if (!message.isEmpty())
 				return message;
 			message = carteiraAutoVc.validarBrindeAgendaDoCarro();
 			break;
+			////////////xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			// Agenda do Carro ================================================
+			case "xxx":
+				message = common.verificaLogin();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.minhaCarteiraAutoVc();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.validarBrindeAgendaDoCarro();
+				break;
 
 		// Check Up Automotivo ================================================
 		case "Check Up Automotivo":

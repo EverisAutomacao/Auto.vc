@@ -29,11 +29,11 @@ public class CarteiraAutoVcElements {
 	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='openPresent'])[2]")
 	public WebElement btnBrindeCarro;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Acesse o Site']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Acessar o Site']")
 	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='couponURL'])[2]")
 	public WebElement btnAcessarSite;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Código do Cupom']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Detalhes do Cupom']")
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Código do Cupom']")
 	public WebElement codigoCupom;
 	
