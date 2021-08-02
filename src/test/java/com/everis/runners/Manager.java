@@ -355,17 +355,7 @@ public class Manager extends Dados {
 				return message;
 			message = carteiraAutoVc.validarBrindeAgendaDoCarro();
 			break;
-			////////////xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-			// Agenda do Carro ================================================
-			case "xxx":
-				message = common.verificaLogin();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.minhaCarteiraAutoVc();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.validarBrindeAgendaDoCarro();
-				break;
+			
 
 		// Check Up Automotivo ================================================
 		case "Check Up Automotivo":
@@ -380,13 +370,7 @@ public class Manager extends Dados {
 
 		// Smiles ================================================
 		case "Smiles":
-			message = termos.concordar();
-			if (!message.isEmpty())
-				return message;
-			message = common.pularTourInicial();
-			if (!message.isEmpty())
-				return message;
-			message = usuario.loginEmail();
+			message = common.verificaLogin();
 			if (!message.isEmpty())
 				return message;
 			message = carteiraAutoVc.minhaCarteiraAutoVc();

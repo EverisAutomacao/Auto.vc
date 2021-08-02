@@ -105,6 +105,7 @@ public class CarteiraAutoVc extends DslMobile {
 			screenShot();
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.btnBrindeAutomotivo));
 			tap(elements.btnBrindeAutomotivo);
+			screenShot();
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.codigoCupom));
 			tap(elements.btnAcessarSite);
 			Thread.sleep(5000);
@@ -168,14 +169,14 @@ public class CarteiraAutoVc extends DslMobile {
 		message = "";
 
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			waitLoading();
-			scroll(90, 20, 1);
+			scroll(90, 20, 2);
 			screenShot();
 			tap(elements.btnBrindeSmiles);
-			Thread.sleep(5000);
-			screenShot();
+			waitLoading();
 			scroll(90, 20, 1);
+			Thread.sleep(1000);
 			screenShot();
 		} catch (Exception e) {
 			message = "Falha ao validar brinde";

@@ -41,7 +41,7 @@ public class CarteiraAutoVcElements {
 	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='openPresent'])[4]")
 	public WebElement btnBrindeAutomotivo;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='https://www.smiles.com.br/home']")
+	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup")
 	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='openPresent'])[5]")
 	public WebElement btnBrindeSmiles;
 	
