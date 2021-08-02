@@ -37,7 +37,7 @@ public class CarteiraAutoVcElements {
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Código do Cupom']")
 	public WebElement codigoCupom;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Check Up Automotivo']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Check Up do Carro']")
 	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name='openPresent'])[4]")
 	public WebElement btnBrindeAutomotivo;
 	

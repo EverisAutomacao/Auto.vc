@@ -99,9 +99,9 @@ public class CarteiraAutoVc extends DslMobile {
 		message = "";
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			waitLoading();
-			scroll(90, 20, 1);
+			scroll(95, 20, 2);
 			screenShot();
 			wait.until(ExpectedConditions.visibilityOfAllElements(elements.btnBrindeAutomotivo));
 			tap(elements.btnBrindeAutomotivo);
@@ -215,85 +215,84 @@ public class CarteiraAutoVc extends DslMobile {
 		return message;
 
 	}
+//
+//	public String compartilharCupom() {
+//		message = "";
+//
+//		String btnCupom = "//*[@content-desc='openPresent']/android.widget.TextView[@text='Agenda do Carro']";
+//		///hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup
+/////hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup
+//		//acessar site
+//		try {
+//
+//			waitLoading();
+//			Thread.sleep(1000);
+//			waitLoading();
+//			scroll(90, 20, 1);
+//			screenShot();
+//			Thread.sleep(1000);
+//			scroll(90, 20, 1);
+//			screenShot();
+//			Thread.sleep(1000);
+//			tap(By.xpath(btnCupom));
+//			Thread.sleep(3000);
+//			scroll(90, 10, 1);
+//			screenShot();
+//			tap(elements.btnEnviarCorretor);
+//			screenShot();
+//			tap(elements.btnGmail);
+//			wait.until(ExpectedConditions.invisibilityOf(elements.telaEmail));
+//			Thread.sleep(3000);
+//		} catch (Exception e) {
+//			message = "Falha ao compartilhar cupom";
+//			e.printStackTrace();
+//		} finally {
+//			screenShot();
+//		}
+//		return message;
 
-	public String compartilharCupom() {
-		message = "";
-
-		String btnCupom = "//*[@content-desc='openPresent']/android.widget.TextView[@text='Agenda do Carro']";
-		///hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup
-///hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup
-		//acessar site
-		try {
-
-			waitLoading();
-			Thread.sleep(1000);
-			waitLoading();
-			scroll(90, 20, 1);
-			screenShot();
-			Thread.sleep(1000);
-			scroll(90, 20, 1);
-			screenShot();
-			Thread.sleep(1000);
-			tap(By.xpath(btnCupom));
-			Thread.sleep(3000);
-			scroll(90, 10, 1);
-			screenShot();
-			tap(elements.btnEnviarCorretor);
-			screenShot();
-			tap(elements.btnGmail);
-			wait.until(ExpectedConditions.invisibilityOf(elements.telaEmail));
-			Thread.sleep(3000);
-		} catch (Exception e) {
-			message = "Falha ao compartilhar cupom";
-			e.printStackTrace();
-		} finally {
-			screenShot();
-		}
-		return message;
-
-	}
-	public String compartilharBrinde(String brinde) {
-		message = "";
-		try {
-
-			waitLoading();
-			Thread.sleep(1000);
-			waitLoading();
-			scroll(90, 20, 1);
-			screenShot();
-			Thread.sleep(1000);
-			switch (brinde) {
-			case "Agenda do Carro":
-				tap(elements.btnBrindeCarro);
-				break;
-			case "Check Up Automotivo":
-				
-				break;
-			case "Smiles":
-				
-				break;
-			default:
-				message = "Brinde não existe";
-				return message;
-			}
-			
-			Thread.sleep(3000);
-			scroll(90, 10, 1);
-			screenShot();
-			tap(elements.btnEnviarCorretor);
-			screenShot();
-			tap(elements.btnGmail);
-			wait.until(ExpectedConditions.invisibilityOf(elements.telaEmail));
-			Thread.sleep(3000);
-		} catch (Exception e) {
-			message = "Falha ao compartilhar brinde["+brinde+"]";
-			e.printStackTrace();
-		} finally {
-			screenShot();
-		}
-		return message;
-
-	}
+//	public String compartilharBrinde(String brinde) {
+//		message = "";
+//		try {
+//
+//			waitLoading();
+//			Thread.sleep(1000);
+//			waitLoading();
+//			scroll(90, 20, 1);
+//			screenShot();
+//			Thread.sleep(1000);
+//			switch (brinde) {
+//			case "Agenda do Carro":
+//				tap(elements.btnBrindeCarro);
+//				break;
+//			case "Check Up Automotivo":
+//				
+//				break;
+//			case "Smiles":
+//				
+//				break;
+//			default:
+//				message = "Brinde não existe";
+//				return message;
+//			}
+//			
+//			Thread.sleep(3000);
+//			scroll(90, 10, 1);
+//			screenShot();
+//			tap(elements.btnEnviarCorretor);
+//			screenShot();
+//			tap(elements.btnGmail);
+//			wait.until(ExpectedConditions.invisibilityOf(elements.telaEmail));
+//			Thread.sleep(3000);
+//		} catch (Exception e) {
+//			message = "Falha ao compartilhar brinde["+brinde+"]";
+//			e.printStackTrace();
+//		} finally {
+//			screenShot();
+//		}
+//		return message;
+//
+//	}
 
 	public String semCupom() {
 		message = "";

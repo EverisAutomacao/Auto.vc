@@ -369,13 +369,7 @@ public class Manager extends Dados {
 
 		// Check Up Automotivo ================================================
 		case "Check Up Automotivo":
-			message = termos.concordar();
-			if (!message.isEmpty())
-				return message;
-			message = common.pularTourInicial();
-			if (!message.isEmpty())
-				return message;
-			message = usuario.loginEmail();
+			message = common.verificaLogin();
 			if (!message.isEmpty())
 				return message;
 			message = carteiraAutoVc.minhaCarteiraAutoVc();
@@ -636,26 +630,6 @@ public class Manager extends Dados {
 			message = cotacao.validarCupom();
 			break;
 
-		// Compartilhar cupom =================================================
-		case "Compartilhar Cupom":
-			message = common.verificaLogin();
-			if (!message.isEmpty())
-				return message;
-			message = carteiraAutoVc.minhaCarteiraAutoVc();
-			if (!message.isEmpty())
-				return message;
-			message = carteiraAutoVc.compartilharCupom();
-			break;
-		// Compartilhar brinde =================================================
-		case "Compartilhar Brinde":
-			message = common.verificaLogin();
-			if (!message.isEmpty())
-				return message;
-			message = carteiraAutoVc.minhaCarteiraAutoVc();
-			if (!message.isEmpty())
-				return message;
-			message = carteiraAutoVc.compartilharBrinde("Agenda do Carro");
-			break;
 
 		default:
 			message = "Funcionalidade [" + funcionalidade + "] não encontrado";
