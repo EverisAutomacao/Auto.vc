@@ -122,6 +122,19 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
+		// Login Email Manipulado 3 viagens <70==================================================
+		case "Login Email Manipulado 3 viagens <70":
+			message = termos.concordar();
+			if (!message.isEmpty())
+				return message;
+			message = common.pularTourInicial();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.loginEmail();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			break;
 
 		// Login Gmail ==================================================
 		case "Login Gmail":
@@ -275,8 +288,8 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			
-			// Usuario sem viagem - Brindes ================================================
+
+		// Usuario sem viagem - Brindes ================================================
 		case "Usuario sem viagem - Brindes":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
@@ -288,21 +301,20 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			
-			// Usuario sem viagem - Cupons ================================================
-			case "Usuario sem viagem - Cupons":
-				message = common.verificaLogin();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.minhaCarteiraAutoVc();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.capturaTelaCupons();
-				if (!message.isEmpty())
-					return message;
-				break;
-			
-			 
+
+		// Usuario sem viagem - Cupons ================================================
+		case "Usuario sem viagem - Cupons":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaCupons();
+			if (!message.isEmpty())
+				return message;
+			break;
+
 		// Sem brindes ================================================
 		case "Sem Brinde":
 			message = termos.concordar();
