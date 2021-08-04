@@ -315,7 +315,7 @@ public class Manager extends Dados {
 				return message;
 			break;
 			
-			// Usuário sem viagem - Cards ================================================
+			// Usuário com 3 viagens - Cards ================================================
 		case "Usuario com 3 viagens - Progresso Card":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
@@ -325,6 +325,19 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
+			// Usuário com 3 viagens - Brindes ================================================
+			case "Usuario com 3 viagens - Brinde Desconto Iniciante":
+				message = common.verificaLogin();
+				if (!message.isEmpty())
+					return message;
+				message = usuario.verificarSeEstaNaTelaInicial();
+				message = carteiraAutoVc.minhaCarteiraAutoVc();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.capturaTelaBrindeDescontoIniciante();
+				if (!message.isEmpty())
+					return message;
+				break;
 
 		// Sem brindes ================================================
 		case "Sem Brinde":

@@ -48,6 +48,20 @@ public class CarteiraAutoVc extends DslMobile {
 		return message;
 	}
 	
+	public String capturaTelaBrindeDescontoIniciante() {
+		message = "";
+		try {
+			Thread.sleep(500);
+			waitLoading();
+			screenShot();
+				
+		} catch (Exception e) {
+			message = "Falha ao capturar tela de Brindes";
+			e.printStackTrace();
+		} 
+		return message;
+	}
+	
 	public String capturaTelaCupons() {
 		message = "";
 		try {

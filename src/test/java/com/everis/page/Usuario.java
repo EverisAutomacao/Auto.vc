@@ -31,9 +31,7 @@ public class Usuario extends DslMobile {
 		} catch (Exception e) {
 			message = "Não esta na tela inicial";
 			e.printStackTrace();
-		} finally {
-			screenShot();
-		}
+		} 
 		return message;
 	}
 	
