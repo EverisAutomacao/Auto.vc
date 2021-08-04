@@ -41,10 +41,7 @@ public class CarteiraAutoVc extends DslMobile {
 		} catch (Exception e) {
 			message = "Falha ao capturar tela de Brindes";
 			e.printStackTrace();
-		} finally {
-
-			screenShot();
-		}
+		} 
 		return message;
 	}
 	

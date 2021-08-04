@@ -325,6 +325,20 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
+			
+			// Usuario sem viagem - Brindes ================================================
+			case "Usuario 20 viagens score <70 - Brindes Não Conquistados":
+				message = common.verificaLogin();
+				if (!message.isEmpty())
+					return message;
+				message = usuario.verificarSeEstaNaTelaInicial();
+				message = carteiraAutoVc.minhaCarteiraAutoVc();
+				if (!message.isEmpty())
+					return message;
+				message = carteiraAutoVc.capturaTelaBrindes();
+				if (!message.isEmpty())
+					return message;
+				break;
 
 		// Usuario sem viagem - Cupons ================================================
 		case "Usuario sem viagem - Cupons":
