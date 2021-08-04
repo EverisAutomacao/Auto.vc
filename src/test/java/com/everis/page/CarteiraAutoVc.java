@@ -142,6 +142,25 @@ public class CarteiraAutoVc extends DslMobile {
 		return message;
 	}
 	
+	public String telaInicialCapturaCardDirecao() {
+		message = "";
+
+		try {
+			Thread.sleep(500);
+			waitLoading();
+			scroll(90, 45, 1);
+			Thread.sleep(500);
+			screenShot();
+		} catch (Exception e) {
+			message = "Falha ao capturar cards";
+			e.printStackTrace();
+		} finally {
+			//screenShot();
+		}
+		return message;
+	}
+	
+	
 
 	public String validarBrindeAgendaDoCarro() {
 		message = "";

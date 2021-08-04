@@ -123,7 +123,7 @@ public class Manager extends Dados {
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
 		// Login Email Manipulado 3 viagens <70==================================================
-		case "Login Email Manipulado 3 viagens <70":
+		case "Login Email Manipulado 3 viagens score>70":
 			message = termos.concordar();
 			if (!message.isEmpty())
 				return message;
@@ -311,6 +311,17 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			message = carteiraAutoVc.capturaTelaCupons();
+			if (!message.isEmpty())
+				return message;
+			break;
+			
+			// Usuário sem viagem - Cards ================================================
+		case "Usuario com 3 viagens - Progresso Card":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.telaInicialCapturaCardDirecao();
 			if (!message.isEmpty())
 				return message;
 			break;
