@@ -149,7 +149,6 @@ public class Manager extends Dados {
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
 
-
 		// Login Gmail ==================================================
 		case "Login Gmail":
 			message = termos.concordar();
@@ -299,6 +298,17 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			message = carteiraAutoVc.telaInicialCapturaCards();
+			if (!message.isEmpty())
+				return message;
+			break;
+			
+			// Usuário sem viagem - Cards ================================================
+		case "Usuario 20 viagens score <70 - Missoes Não Cumpridas":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.telaInicialCapturaCards2();
 			if (!message.isEmpty())
 				return message;
 			break;
