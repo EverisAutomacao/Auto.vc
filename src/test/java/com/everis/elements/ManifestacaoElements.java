@@ -22,6 +22,10 @@ public class ManifestacaoElements {
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Clique aqui e envie uma mensagem para o nosso SAC.']")
 	public WebElement btnEnviarMensagem;
 	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Vamos lá']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Clique aqui e envie uma mensagem para o nosso SAC.']")
+	public WebElement btnVamosLa;
+	
 	@AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='subjectText']")
 	public WebElement inputAssunto;
 	
@@ -32,8 +36,8 @@ public class ManifestacaoElements {
 	//@iOSXCUITFindBy(xpath = "")
 	public WebElement btnEnviarManifestacao;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Sua mensagem foi enviada com sucesso.']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Reportar um problema']")
 	//@iOSXCUITFindBy(xpath = "")
-	public WebElement msg;
+	public WebElement telaManifestacao;
 
 }

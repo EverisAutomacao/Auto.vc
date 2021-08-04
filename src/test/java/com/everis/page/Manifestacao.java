@@ -16,9 +16,10 @@ public class Manifestacao extends DslMobile {
 		try {
 
 
-			scrollElementIsPresent(elements.btnFalarComSAS, 75, 1);
+			scrollElementIsPresent(elements.btnFalarComSAS, 70, 1);
 			tap(elements.btnFalarComSAS);
 			tap(elements.btnEnviarMensagem);
+		
 			Thread.sleep(1000);
 			screenShot();
 
@@ -38,10 +39,11 @@ public class Manifestacao extends DslMobile {
 				sendKeysWithPosition(208, 347, tools.getTextRandom());
 			}
 			tap(elements.btnEnviarManifestacao);
+			tap(elements.btnVamosLa);
 			screenShot();
 			Thread.sleep(1000);
 			waitLoading();
-			if (!isPresent(elements.msg)) {
+			if (isPresent(elements.telaManifestacao)) {
 				message = "Falha ao abrir manifestação";
 			}
 
