@@ -95,7 +95,7 @@ public class Manager extends Dados {
 				return message;
 			message = config.verificarVersao();
 			break;
-		// Login Email ==================================================
+		// Login Email mais de 20 viagens login maior que 70 ==================================================
 		case "Login Email":
 			message = termos.concordar();
 			if (!message.isEmpty())
@@ -123,7 +123,7 @@ public class Manager extends Dados {
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
 		// Login Email Manipulado 3 viagens <70==================================================
-		case "Login Email Manipulado 3 viagens score>70":
+		case "Login Email 3 viagens score>70":
 			message = termos.concordar();
 			if (!message.isEmpty())
 				return message;
@@ -135,6 +135,20 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
+			// Login Email 20 viagens score menor que 70 ==================================================
+		case "Login Email 20 viagens score <70":
+			message = termos.concordar();
+			if (!message.isEmpty())
+				return message;
+			message = common.pularTourInicial();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.loginEmail();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			break;
+
 
 		// Login Gmail ==================================================
 		case "Login Gmail":
