@@ -95,7 +95,8 @@ public class Manager extends Dados {
 				return message;
 			message = config.verificarVersao();
 			break;
-		// Login Email mais de 20 viagens login maior que 70 ==================================================
+		// Login Email mais de 20 viagens login maior que 70
+		// ==================================================
 		case "Login Email":
 			message = termos.concordar();
 			if (!message.isEmpty())
@@ -122,7 +123,8 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
-		// Login Email Manipulado 3 viagens <70==================================================
+		// Login Email Manipulado 3 viagens
+		// <70==================================================
 		case "Login Email 3 viagens score>70":
 			message = termos.concordar();
 			if (!message.isEmpty())
@@ -135,7 +137,8 @@ public class Manager extends Dados {
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
 			break;
-			// Login Email 20 viagens score menor que 70 ==================================================
+		// Login Email 20 viagens score menor que 70
+		// ==================================================
 		case "Login Email 20 viagens score <70":
 			message = termos.concordar();
 			if (!message.isEmpty())
@@ -301,18 +304,29 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			
-			// Usuário sem viagem - Cards ================================================
-		case "Usuario 20 viagens score <70 - Missoes Não Cumpridas":
+
+		// Usuário sem viagem - Cards ================================================
+		case "Usuario 20 viagens - Missoes Não Cumpridas":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
 				return message;
 			message = usuario.verificarSeEstaNaTelaInicial();
-			message = carteiraAutoVc.telaInicialCapturaCards2();
+			message = carteiraAutoVc.telaInicialCapturaCards();
 			if (!message.isEmpty())
 				return message;
 			break;
 
+			// Usuario 20 viagens score maior que 70================================================
+		case "Usuario 20 viagens - Missoes Cumpridas":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.telaInicialCapturaCards();
+			if (!message.isEmpty())
+				return message;
+			break;
+			
 		// Usuario sem viagem - Brindes ================================================
 		case "Usuario sem viagem - Brindes":
 			message = common.verificaLogin();
@@ -325,21 +339,20 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			
-			// Usuario sem viagem - Brindes ================================================
-			case "Usuario 20 viagens score <70 - Brindes Não Conquistados":
-				message = common.verificaLogin();
-				if (!message.isEmpty())
-					return message;
-				message = usuario.verificarSeEstaNaTelaInicial();
-				message = carteiraAutoVc.minhaCarteiraAutoVc();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.capturaTelaBrindes();
-				if (!message.isEmpty())
-					return message;
-				break;
 
+		// Usuario sem viagem - Brindes ================================================
+		case "Usuario 20 viagens - Brindes Não Conquistados":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaBrindes();
+			if (!message.isEmpty())
+				return message;
+			break;
 		// Usuario sem viagem - Cupons ================================================
 		case "Usuario sem viagem - Cupons":
 			message = common.verificaLogin();
@@ -352,8 +365,33 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			
-			// Usuário com 3 viagens - Cards ================================================
+		// Usuario sem viagem - Cupons ================================================
+		case "Usuario com 3 viagens - Cupons":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaCupons();
+			if (!message.isEmpty())
+				return message;
+			break;
+
+		// Usuario sem viagem - Cupons ================================================
+		case "Usuario 20 viagens - Cupom smiles Não Conquistado":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaCupons();
+			if (!message.isEmpty())
+				return message;
+			break;
+		// Usuário com 3 viagens - Cards
+		// ================================================
 		case "Usuario com 3 viagens - Progresso Card":
 			message = common.verificaLogin();
 			if (!message.isEmpty())
@@ -363,19 +401,20 @@ public class Manager extends Dados {
 			if (!message.isEmpty())
 				return message;
 			break;
-			// Usuário com 3 viagens - Brindes ================================================
-			case "Usuario com 3 viagens - Brinde Desconto Iniciante":
-				message = common.verificaLogin();
-				if (!message.isEmpty())
-					return message;
-				message = usuario.verificarSeEstaNaTelaInicial();
-				message = carteiraAutoVc.minhaCarteiraAutoVc();
-				if (!message.isEmpty())
-					return message;
-				message = carteiraAutoVc.capturaTelaBrindeDescontoIniciante();
-				if (!message.isEmpty())
-					return message;
-				break;
+			
+		// Usuário com 3 viagens - Brindes ================================================
+		case "Usuario com 3 viagens - Brinde Desconto Iniciante":
+			message = common.verificaLogin();
+			if (!message.isEmpty())
+				return message;
+			message = usuario.verificarSeEstaNaTelaInicial();
+			message = carteiraAutoVc.minhaCarteiraAutoVc();
+			if (!message.isEmpty())
+				return message;
+			message = carteiraAutoVc.capturaTelaBrindeDescontoIniciante();
+			if (!message.isEmpty())
+				return message;
+			break;
 
 		// Sem brindes ================================================
 		case "Sem Brinde":
@@ -417,7 +456,6 @@ public class Manager extends Dados {
 				return message;
 			message = carteiraAutoVc.validarBrindeAgendaDoCarro();
 			break;
-			
 
 		// Check Up Automotivo ================================================
 		case "Check Up Automotivo":
@@ -675,7 +713,6 @@ public class Manager extends Dados {
 				return message;
 			message = cotacao.validarCupom();
 			break;
-
 
 		default:
 			message = "Funcionalidade [" + funcionalidade + "] não encontrado";
